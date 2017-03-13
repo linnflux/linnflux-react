@@ -1,5 +1,6 @@
 # linnflux-react
-ReactJS Boilerplate
+ReactJS Boilerplate.  
+Utilizing react, react-router, flux, materialize, with PHP api calls to a MySQL database.
 
 #Step 1:
 Go to config/database.php to enter DB info.
