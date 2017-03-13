@@ -1,0 +1,198 @@
+/******************************************/
+/************* LINNFLUX REACT *************/
+/*** flux,router,materialize,auth setup ***/
+/******************************************/
+
+
+
+/* global */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+$font-stack: 'Open Sans', sans-serif;
+$primary-color: #4caf50;
+
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+body {
+	font: 100% $font-stack;
+	font-size:14px;
+	color: $primary-color;
+}
+
+.btn-primary {
+	@include transition(1s);
+	background-image:none;
+	background-color:transparent;
+	border:1px solid $primary-color;
+	color:$primary-color;
+	cursor:pointer;
+	margin-top:.75em;
+	margin-bottom:.75em;
+	padding:5px 15px;
+	text-transform: uppercase;
+
+	&:hover, &:focus {
+		@include transition(1s);
+		background-color:$primary-color;
+		color:#fff;
+		text-decoration: none;
+
+	}
+}
+
+
+/* header */
+nav {
+    background-color: $primary-color;
+}
+
+.brand-logo img {
+	margin-left:2em;
+	max-width:100px;
+}
+
+li {
+	@include transition(1s);
+}
+
+li .active {
+	@include transition(1s);
+	background-color:#fff;
+	color:$primary-color;
+
+	&:hover {
+		@include transition(1s);		
+		color:#fff;
+	}
+}
+
+.side-nav li a {
+	&.active {
+		background-color:$primary-color;
+		color:#fff;
+		&:hover {
+			color:#fff;
+		}
+	}
+	&:hover {
+		color:$primary-color;
+	}
+}
+
+
+
+/* login-box */
+.login-box {
+	background-color:#fff;
+	border:1px solid #ccc;
+	box-shadow: 5px 5px 5px rgba(25,25,25,0.4);
+	margin-top:6em;
+	max-width:40em;
+
+	h1 {
+		margin-bottom:2em;
+		text-align:center;
+	}
+
+	.login-select {
+		background-color:#eee;
+		border:1px solid #ccc;
+		color:#333;
+		cursor: pointer;
+		font-size:1em;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.select-active {
+		background-color:#fff;
+		border-color:$primary-color;
+		cursor:default;
+	}
+
+	.login-internal {
+		margin:0 0 3em;
+		text-align: center;
+
+		img {
+			margin:2em auto;
+			max-width:200px;
+		}
+
+		.login-signup {
+			margin:0;
+			max-width:100%;
+		}
+	}
+
+	.login-body {
+
+		padding-top:2em;
+		padding-bottom:2em;
+		text-align: center;
+
+		.row {
+			margin-top:1.5em;
+			margin-bottom:1.5em;
+			padding-top:1em;
+			padding-bottom:1em;
+
+			.input-field {
+				margin-left: 3vw;
+			}
+		}
+
+		.btn.primary {
+			display: block;
+			padding-top:2em;
+		}
+
+		span {
+			color:#333;
+			float:right;	
+		}
+
+		input {
+			border:none;
+			border-bottom:1px solid #ccc;
+			float:left;
+			width:80%;
+		}
+	}
+}
+
+/* home */
+div.page {
+	h2 {
+		margin:2em auto;
+	}
+	.featuring {
+		margin-left:20vw;
+		max-width:25em;
+		h3 {
+			font-family: 'Dancing Script', cursive;
+			margin:-.5em auto 1em;
+		}
+		p {
+			margin-left:6em;
+			text-align:left;
+			i {
+				font-size:1.5em;
+			}
+			span {
+				font-size:1.8em;
+			}
+		}
+	}
+}
+.eventually {
+	h3 {
+			font-family: 'Dancing Script', cursive;
+			margin:-.5em auto 1em;
+		}
+}
